@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hr-ranking-langchain"
+version = "0.1.0"
+description = ""
+authors = ["Ritesh Shakya <riteshakya037@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+chainlit = "^1.1.202"
+tomli = "^2.0.1"
+langchain = "^0.2.3"
+langchain-core = "^0.2.5"
+pydantic = "^2.7.3"
+pydantic-core = "^2.18.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
