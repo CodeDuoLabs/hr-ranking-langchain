@@ -1,8 +1,3 @@
-[general_messages]
-tip_correct_format = "Tip: Make sure to answer in the correct format"
-tip_language = "Tip: Make sure that you write all your answers in {language}."
-tip_name = "Tip: Try to personalize the questions my addressing the customer by their name. NAME: {name}"
-
 [question_initial]
 message = """### Hello! Welcome to CodeDuos's HR Processes Optimizer.
 
@@ -22,5 +17,8 @@ message = "### Processing \n\n- {file_names}. \n\nYou have currently **{length}*
 [error_skills_weight]
 message = "The length of the skill and weights do not match. Please make sure that the length of the skills and weights match, so that we can score the CVs."
 
-
+[promt_skills]
+prompt="""
+Based on the following text, how many years does this person have in {technology}.? And tell whether this person has experience in {technology}. If a person has experience in {technology} but you cannot figure out the years reply with 1.\n\n
+"""
 

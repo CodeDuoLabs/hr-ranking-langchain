@@ -12,13 +12,9 @@ from hr_ranking_langchain.models.skills import SkillNumberOfYearsResponse, Skill
 from hr_ranking_langchain.logger import logger
 from .skill_check_service import skill_check
 from .keyword_service import extract_keywords
+from hr_ranking_langchain.toml_support import prompts
 
 
-SKILL_TEMPLATE = PromptTemplate.from_template(
-    "Based on the following text, how many years does this person have in {technology}.? "
-    + "And tell whether this person has experience in {technology}."
-    + "If a person has experience in {technology} but you cannot figure out the years reply with 1.\n\n"
-)
 async def process_docs(
     docs: List[Document],
     skills: List[str] ,
@@ -69,7 +65,9 @@ async def process_skills(
         schema, has_skill_field, number_of_years_with_skill = create_skill_schema(skill)
         chain = create_tagging_chain(schema, cfg.llm, verbose=cfg.verbose_llm)
         # Combine the CV with a question
-        doc.page_content = SKILL_TEMPLATE.format(technology=skill) + page_content
+        doc.page_content = PromptTemplate.from_template(
+            prompts["promt_skills"]["prompt"]
+        ).format(technology=skill) + page_content
         # Run the chain
         number_of_years_response_json = chain.run(doc)
         # Extract the results

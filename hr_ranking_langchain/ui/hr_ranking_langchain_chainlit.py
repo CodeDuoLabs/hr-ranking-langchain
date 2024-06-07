@@ -78,7 +78,11 @@ async def processing_file_message(docs: List[Document], skills: List[str], weigh
         )
     ]
 
-    barchart_message = cl.Message(content="## Results", elements=elements)
+    barchart_message = cl.Message(
+        content="## Results",
+        elements=elements,
+        author=AVATAR["CHATBOT"],
+    )
     await barchart_message.send()
     
     await execute_candidates(candidate_infos)
