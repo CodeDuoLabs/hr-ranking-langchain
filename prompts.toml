@@ -1,0 +1,26 @@
+[general_messages]
+tip_correct_format = "Tip: Make sure to answer in the correct format"
+tip_language = "Tip: Make sure that you write all your answers in {language}."
+tip_name = "Tip: Try to personalize the questions my addressing the customer by their name. NAME: {name}"
+
+[question_initial]
+message = """### Hello! Welcome to CodeDuos's HR Processes Optimizer.
+
+Please provide the job description so that we can proceed with the next step.
+
+Let's proceed!"""
+
+[question_skills_weight]
+message = "Please enter the list of {length} weights as a comma separated list, like e.g: `4, 3, 2, 1, 1` for the skills below.  \n\n- {skills}"
+
+[question_upload_file]
+message = "Please upload multiple pdf files with the CV of a candidate!"
+
+[update_file_message]
+message = "### Processing \n\n- {file_names}. \n\nYou have currently **{length}** files.\n\n"
+
+[error_skills_weight]
+message = "The length of the skill and weights do not match. Please make sure that the length of the skills and weights match, so that we can score the CVs."
+
+
+

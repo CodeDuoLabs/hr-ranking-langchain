@@ -1,5 +1,13 @@
 ## Installation
 
+Activate environment
+
+```
+poetry shell
+```
+
+Install Dependencies
+
 ```
 poetry install
 ```
@@ -9,10 +17,8 @@ poetry install
 ### Running the main application
 
 ```
-chainlit run ./hr_ranking_langchain/ui/hr_ranking_langchain_chainlit.py --port 8080
+chainlit run ./hr_ranking_langchain/ui/hr_ranking_langchain_chainlit.py --watch  --port 8080 
 ```
-
-
 
 ## Configuration
 

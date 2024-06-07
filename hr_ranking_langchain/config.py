@@ -29,8 +29,11 @@ class Config:
     show_chain_of_thought = os.getenv("SHOW_CHAIN_OF_THOUGHT") == "true"
 
     token_limit = int(os.getenv("TOKEN_LIMIT"))
+    
+    temp_doc_location = Path(os.getenv("TEMP_DOC_LOCATION"))
 
-    product_title = "arcab Lead Generation"
+    if not temp_doc_location.exists():
+        temp_doc_location.mkdir(parents=True)
 
 
 cfg = Config()
