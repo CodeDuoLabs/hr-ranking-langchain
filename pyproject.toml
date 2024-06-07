@@ -4,13 +4,16 @@ version = "0.1.0"
 description = ""
 authors = ["Ritesh Shakya <riteshakya037@gmail.com>"]
 readme = "README.md"
+packages = [{ include = "hr_ranking_langchain" }]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.10,<3.13"
+python-dotenv = "^1.0.1"
 chainlit = "^1.1.202"
 tomli = "^2.0.1"
 langchain = "^0.2.3"
 langchain-core = "^0.2.5"
+langchain-openai = "^0.1.8"
 pydantic = "^2.7.3"
 pydantic-core = "^2.18.4"
 

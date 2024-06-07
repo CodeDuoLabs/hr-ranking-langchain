@@ -1,0 +1,19 @@
+/* Hiding the watermark at the bottom */
+.watermark {
+    display: none !important;
+}
+
+/* Hiding the settings button */
+.css-hr9wpe {
+    display: none !important;
+}
+
+/* Hiding the message date */
+.css-2d40dx {
+    display: none !important;
+}
+
+/* Hiding the Readme Tab select */
+.css-1mzerio {
+    display: none !important;
+}
