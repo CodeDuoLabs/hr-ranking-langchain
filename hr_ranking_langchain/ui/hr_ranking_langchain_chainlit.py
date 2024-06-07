@@ -117,6 +117,7 @@ async def process_files() -> Tuple[List[Document], types.AskFileResponse] :
             content="Please upload multiple pdf files with the CV of a candidate!",
             accept=["application/pdf"],
             author=AVATAR["CHATBOT"],
+            accept=["application/pdf"],
             max_files=MAX_FILES,
             timeout=TIMEOUT,
         ).send()
